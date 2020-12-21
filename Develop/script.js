@@ -12,3 +12,16 @@ function writePassword() {
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
+
+// All characters
+var specChar = ["`~!@#$%^&*()_+=\?/"];
+var res = str.split();
+
+var number = ["1234567890"];
+var res = str.split();
+
+var lowerChar = ["abcdefghijklmnopqrstuvwxyz"];
+var res = str.split();
+
+var upperChar = ["ABCDEFGHIJKLMNOPQRSTUVWXYZ"];
+var res = str.split();
