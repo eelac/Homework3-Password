@@ -1,17 +1,93 @@
 // All characters
-function getLower() {
-  return String.fromCharCode(Math.floor(Math.random() * 26) + 97);
-}
-function getUpper() {
-  return String.fromCharCode(Math.floor(Math.random() * 26) + 65);
-}
-function getNumber() {
-  return String.fromCharCode(Math.floor(Math.random() * 10) + 48);
-}
-function getSymbol() {
-  const symbols = "!@#$%^&*()_+-=[]{}|,./<>?;':";
-  return symbols[Math.floor(Math.random() * symbols.length)];
-}
+var lowerChar = [
+  "a",
+  "b",
+  "c",
+  "d",
+  "e",
+  "f",
+  "g",
+  "h",
+  "i",
+  "j",
+  "k",
+  "l",
+  "m",
+  "n",
+  "o",
+  "p",
+  "q",
+  "r",
+  "s",
+  "t",
+  "u",
+  "v",
+  "w",
+  "x",
+  "y",
+  "z",
+];
+
+var upperChar = [
+  "A",
+  "B",
+  "C",
+  "D",
+  "E",
+  "F",
+  "G",
+  "H",
+  "I",
+  "J",
+  "K",
+  "L",
+  "M",
+  "N",
+  "O",
+  "P",
+  "Q",
+  "R",
+  "S",
+  "T",
+  "U",
+  "V",
+  "W",
+  "X",
+  "Y",
+  "Z",
+];
+
+var numbChar = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"];
+
+var symbolChar = [
+  "`",
+  "~",
+  "!",
+  "@",
+  "#",
+  "$",
+  "%",
+  "^",
+  "&",
+  "*",
+  "(",
+  ")",
+  "-",
+  "_",
+  "=",
+  "+",
+  "[",
+  "]",
+  "\\",
+  "{",
+  "}",
+  ",",
+  ".",
+  "/",
+  "<",
+  ">",
+  "?",
+];
 
 //Select characters prompt
 function generatePassword() {
@@ -33,6 +109,14 @@ function generatePassword() {
     alert("You must select at least one character type.");
     return;
   }
+  var passwordChoice = {
+    length: length,
+    lower: lower,
+    upper: upper,
+    number: number,
+    symbol: symbol,
+  };
+  return passwordChoice;
 }
 
 // Assignment Code
