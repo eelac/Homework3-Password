@@ -9,19 +9,31 @@ function getNumber() {
   return String.fromCharCode(Math.floor(Math.random() * 10) + 48);
 }
 function getSymbol() {
-  const symbols = "!@#$%^&*()_+-=[]\{}|,./<>?;':";
-  return symbols [Math.floor(Math.random() * symbols.length)];
+  const symbols = "!@#$%^&*()_+-=[]{}|,./<>?;':";
+  return symbols[Math.floor(Math.random() * symbols.length)];
 }
 
 //Select characters prompt
 function generatePassword() {
-var length = parseInt(prompt('How many characters for your password?'));
-var lower = confirm('Would you like lowercase letters?');
-var upper = confirm('Would you like uppercase letters?');
-var number = confirm('Would you like numbers?');
-var symbol = confirm('Would you like symbols?');
+  var length = parseInt(prompt("How many characters for your password?"));
+  if (isNaN(length) === true) {
+    alert("You must input a number.");
+    return;
+  }
+  var lower = confirm("Would you like lowercase letters?");
+  var upper = confirm("Would you like uppercase letters?");
+  var number = confirm("Would you like numbers?");
+  var symbol = confirm("Would you like symbols?");
+  if (
+    lower === false &&
+    upper === false &&
+    number === false &&
+    symbol == false
+  ) {
+    alert("You must select at least one character type.");
+    return;
+  }
 }
-
 
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
