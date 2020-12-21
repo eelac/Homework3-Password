@@ -14,14 +14,19 @@ function writePassword() {
 generateBtn.addEventListener("click", writePassword);
 
 // All characters
-var specChar = ["`~!@#$%^&*()_+=\?/"];
-var res = str.split();
+function getLower() {
+  return String.fromCharCode(Math.floor(Math.random() * 26) + 97);
+}
+function getUpper() {
+  return String.fromCharCode(Math.floor(Math.random() * 26) + 65);
+}
+function getNumber() {
+  return String.fromCharCode(Math.floor(Math.random() * 10) + 48);
+}
 
-var number = ["1234567890"];
-var res = str.split();
+function getSymbol() {
+  const symbols = "!@#$%^&*()_+-=[]\{}|,./<>?;':";
+  return symbols [Math.floor(Math.random() * symbols.length)];
+}
 
-var lowerChar = ["abcdefghijklmnopqrstuvwxyz"];
-var res = str.split();
-
-var upperChar = ["ABCDEFGHIJKLMNOPQRSTUVWXYZ"];
-var res = str.split();
+console.log(getSymbol());
