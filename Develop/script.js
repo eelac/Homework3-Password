@@ -90,7 +90,7 @@ var symbolChar = [
 ];
 
 //Select characters prompt
-function generatePassword() {
+function userPrompt() {
   var length = parseInt(prompt("How many characters for your password?"));
   if (isNaN(length) === true) {
     alert("You must input a number.");
@@ -117,6 +117,13 @@ function generatePassword() {
     symbol: symbol,
   };
   return passwordChoice;
+}
+
+//Random array
+function getRandom(arr) {
+  var randIndex = Math.floor(Math.random() * arr.length);
+  var randElement = arr[randIndex];
+  return randElement;
 }
 
 // Assignment Code
