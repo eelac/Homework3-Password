@@ -126,6 +126,41 @@ function getRandom(arr) {
   return randElement;
 }
 
+//Generate password
+function generatePassword() {
+  var option = userPrompt();
+  var result = [];
+  var possChar = [];
+  var guarChar = [];
+  if (option.lower) {
+    possChar = possChar.concat(lowerChar);
+    guarChar.push(getRandom(lowerChar));
+  }
+  if (option.upper) {
+    possChar = possChar.concat(upperChar);
+    guarChar.push(getRandom(upperChar));
+  }
+  if (option.number) {
+    possChar = possChar.concat(numbChar);
+    guarChar.push(getRandom(numbChar));
+  }
+  if (option.symbol) {
+    possChar = possChar.concat(symbolChar);
+    guarChar.push(getRandom(symbolChar));
+  }
+  for (var i=0; i < option.length; i++) {
+    var randomChar = getRandom(possChar);
+    result.push(randomChar);
+  }
+  for (var i = 0; i < guarChar.length; i++) {
+    result[i] = guarChar[i];
+  }
+  console.log('possChar array:', possChar);
+
+  return result.join('');
+  
+}
+
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
